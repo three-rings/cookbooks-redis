@@ -1,7 +1,7 @@
 DESCRIPTION:
 ===========
 
-Installs a Redis cookbook.
+Installs a source file Redis chef cookbook.
 
 
 ATTRIBUTES:
@@ -24,6 +24,7 @@ USAGE:
   }
 }
 ```
+
 
 LICENSE:
 ==================
