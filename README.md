@@ -19,7 +19,7 @@ USAGE:
 
 ```bash
 {
-  "redis": { "version" : "2.4.16" },
+  "redis": { "version" : "2.6.4" },
   "run_list": "redis"
   }
 }

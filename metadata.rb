@@ -2,5 +2,5 @@ maintainer       "YOUR_COMPANY_NAME"
 maintainer_email "YOUR_EMAIL"
 license          "All rights reserved"
 description      "Installs/Configures Redis"
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
-version          "0.0.1"
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          "0.0.2"
