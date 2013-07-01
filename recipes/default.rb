@@ -8,15 +8,20 @@
 # All rights reserved - Do Not Redistribute
 #
 package "tcl"
+package "gcc"
 
-bin = "/usr/local/bin/redis-server"
+path = node[:redis][:path]
+bin = "#{path}/redis-server"
 version  = node[:redis][:version]
 file = "redis-#{version}"
 url = "https://redis.googlecode.com/files/redis-#{version}.tar.gz"
-installed_version = `#{bin} -v 2>&1`.chomp.split(/\s/)[2].sub("v=","")
-log "installed version: #{installed_version}"
-do_install = ( version != installed_version )
 
+do_install = true
+if `which #{bin}` == 0 then
+  installed_version = `#{bin} -v 2>&1`.chomp.split(/\s/)[2].sub("v=","")
+  log "installed version: #{installed_version}"
+  do_install = ( version != installed_version )
+end
 
 remote_file "/tmp/redis-#{version}.tar.gz" do
   source "#{url}"
