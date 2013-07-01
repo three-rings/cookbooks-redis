@@ -19,7 +19,10 @@ USAGE:
 
 ```bash
 {
-  "redis": { "version" : "2.6.4" },
+  "redis": {
+    "version" : "2.6.4",
+    "path" : "/usr/local/bin"
+  },
   "run_list": "redis"
   }
 }
